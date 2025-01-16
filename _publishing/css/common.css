@@ -1,0 +1,289 @@
+@charset "UTF-8";
+@import url('./reset.css');
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css');
+
+/* _______________ common _______________ */
+:root {
+	--primary-color: #323232;
+	--point-color: #89cfeb;
+	--white-color: #fff;
+	--black-color: #000;
+	--common-font-size: 1.6rem;
+}
+img {
+	width: 100%;
+}
+html,
+body {
+	font-family: 'Pretendard Variable', sans-serif;
+	font-size: 16px;
+	font-size: 62.5%; /* 10px */
+	font-weight: 400;
+	line-height: 1.3;
+}
+html.hidden,
+body.hidden {
+	overflow: hidden;
+}
+.italic {
+	font-style: italic;
+}
+.btn-box {
+	font-size: 0;
+}
+.pc-only {
+	display: block;
+}
+.mo-only {
+	display: none;
+}
+
+/* _______________ IR _______________ */
+.blind {
+	position: absolute;
+	clip-path: inset(50%);
+	width: 1px;
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+}
+
+/* _______________ 첫 화면 시작 _______________ */
+.enter {
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	z-index: 100000;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+}
+.enter.close {
+	display: none;
+}
+.enter .dimmed {
+	display: grid;
+	grid-template-columns: repeat(10, 1fr);
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+}
+@keyframes enterRemove {
+	to {
+		display: none;
+	}
+}
+.enter .dimmed div {
+	background-color: var(--black-color);
+}
+.enter .dimmed div.rise {
+	animation: riseUp 1s ease-in-out forwards;
+}
+.enter .dimmed div.rise:nth-child(5),
+.enter .dimmed div.rise:nth-child(6) {
+	animation-delay: 0.3s;
+}
+.enter .dimmed div.rise:nth-child(4),
+.enter .dimmed div.rise:nth-child(7) {
+	animation-delay: 0.4s;
+}
+.enter .dimmed div.rise:nth-child(3),
+.enter .dimmed div.rise:nth-child(8) {
+	animation-delay: 0.5s;
+}
+.enter .dimmed div.rise:nth-child(2),
+.enter .dimmed div.rise:nth-child(9) {
+	animation-delay: 0.6s;
+}
+.enter .dimmed div.rise:nth-child(1),
+.enter .dimmed div.rise:nth-child(10) {
+	animation-delay: 0.7s;
+}
+@keyframes riseUp {
+	from {
+		transform: translateY(0%);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}
+.greeting-text {
+	position: relative;
+	font-size: 3rem;
+	font-weight: bold;
+	color: var(--white-color);
+	transition: linear 0.3s;
+	z-index: 2;
+}
+.greeting-text.close {
+	opacity: 0;
+}
+.greeting-text span {
+	opacity: 0;
+	animation: fadeIn 0.5s linear forwards;
+}
+.greeting-text span:nth-child(1) {
+	animation-delay: 0s;
+}
+.greeting-text span:nth-child(2) {
+	animation-delay: 0.2s;
+}
+.greeting-text span:nth-child(3) {
+	animation-delay: 0.4s;
+}
+.greeting-text span:nth-child(4) {
+	animation-delay: 0.6s;
+}
+.greeting-text span:nth-child(5) {
+	animation-delay: 0.8s;
+}
+.greeting-text span:nth-child(6) {
+	animation-delay: 1s;
+}
+.greeting-text span:nth-child(7) {
+	animation-delay: 1.2s;
+}
+@keyframes fadeIn {
+	0% {
+		opacity: 0;
+	}
+	100% {
+		opacity: 1;
+	}
+}
+.greeting-text .smile {
+	display: inline-block;
+	margin-left: 10px;
+	transform: rotate(90deg);
+}
+
+/* _______________ top button _______________ */
+.top-btn-box {
+	display: none;
+	position: fixed;
+	right: 45px;
+	bottom: 45px;
+	z-index: 30;
+}
+.top-btn-box.view {
+	display: block;
+}
+.top-btn-box #top-btn {
+	width: 45px;
+	height: 45px;
+	background-image: url('/assets/images/icon/icon_top_btn.png');
+	background-repeat: no-repeat;
+	background-position: top 13px center;
+	background-size: 20px;
+	background-color: var(--white-color);
+	border: 2px solid var(--point-color);
+	border-radius: 50%;
+	text-indent: -9999px;
+	transition: ease 0.3s;
+}
+.top-btn-box #top-btn:hover {
+	background-image: url('/assets/images/icon/icon_top_btn_hover.png');
+	background-color: var(--primary-color);
+}
+
+/* _______________ skip navigation _______________ */
+#skip-navi li {
+	position: absolute;
+	top: -100%;
+	left: 0;
+	right: 0;
+	background-color: var(--black-color);
+	border: 5px solid #525252;
+	z-index: 10000;
+}
+#skip-navi li:has(a:focus),
+#skip-navi li:has(a:active) {
+	top: 0;
+}
+#skip-navi li a {
+	display: block;
+}
+#skip-navi li a span {
+	display: inline-block;
+	padding: 15px 100px;
+	font-size: 2rem;
+	color: var(--white-color);
+}
+
+/* _______________ progress _______________ */
+.progress-bar progress {
+	position: fixed;
+	top: 50px;
+	left: 0;
+	z-index: 10000;
+	width: 100%;
+	height: 5px;
+	border: none;
+	background-color: transparent;
+}
+.progress-bar progress::-webkit-progress-bar {
+	background-color: transparent;
+}
+.progress-bar progress::-webkit-progress-value {
+	background: linear-gradient(to right, #fc4236, #ff6b01, #fdc741, #25ce7b, #01b3e3, #db38b5);
+}
+
+/* _______________ 스크롤 바 _______________ */
+/* 스크롤바의 넓이 */
+body::-webkit-scrollbar {
+	width: 8px;
+}
+body::-webkit-scrollbar-thumb {
+	height: 10%;
+	border-radius: 5px;
+	/* 스크롤 바의 색상 */
+	background: var(--primary-color);
+}
+/* 스크롤 바의 뒷 배경색 */
+body::-webkit-scrollbar-track {
+	background: rgba(33, 122, 244, 0.2);
+}
+
+@media all and (max-width: 1024px) {
+	html,
+	body {
+		font-family: 'Pretendard Variable', sans-serif;
+		font-size: 12px;
+		font-size: 50%; /* 8px */
+	}
+}
+
+@media all and (max-width: 768px) {
+	/* _______________ common _______________ */
+	.pc-only {
+		display: none;
+	}
+	.mo-only {
+		display: block;
+	}
+
+	/* _______________ top button _______________ */
+	.top-btn-box {
+		right: 10px;
+		bottom: 10px;
+	}
+	.top-btn-box #top-btn .left {
+		left: 8px;
+		transform: translateY(2px) rotate(-50deg);
+	}
+	.top-btn-box #top-btn .right {
+		right: 8px;
+		transform: translateY(2px) rotate(50deg);
+	}
+
+	/* _______________ progress _______________ */
+	.progress-bar progress {
+		display: none;
+	}
+}
