@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>카카오톡 클론 코딩</title>
+  <title>하나카드 클론 코딩</title>
   <link rel="stylesheet" href="./css/common.css">
   <link rel="stylesheet" href="./css/main.css">
 </head>
@@ -12,36 +12,258 @@
 <body>
   <nav id="skip-navi">
     <ul>
+      <li><a href="">메뉴 바로가기</a></li>
       <li><a href="">본문 바로가기</a></li>
-      <li><a href="">사이트맵 바로가기</a></li>
     </ul>
   </nav>
 
   <header>
     <div class="gnb-wrap">
-      <div class="gnb-top">
-        <h1></h1>
+      <h1>
+        <a href="" class="blind">하나카드</a>
+      </h1>
+      <div class="util-menu">
         <ul>
-          <li><a href="">소개</a></li>
-          <li><a href="">기술과 서비스</a></li>
-          <li><a href="">약소과 책임</a></li>
-          <li><a href="">소식</a></li>
-          <li><a href="">투자정보</a></li>
+          <li><a href=""><span>개인</span></a></li>
+          <li><a href=""><span>기업</span></a></li>
+          <li><a href=""><span>가맹점</span></a></li>
+        </ul>
+        <ul>
+          <li>
+            <!-- 로그인/로그아웃 클릭 시 텍스트 토글 -->
+            <a href=""><span>로그인</span></a>
+            <!-- <a href=""><span>로그아웃</span></a> -->
+          </li>
+          <li><a href=""><span>이벤트</span></a></li>
+          <li><a href=""><span>공지사항</span></a></li>
+          <li><a href=""><span>상품공시실</span></a></li>
+          <li><a href=""><span>금융소비자보호</span></a></li>
+          <li><a href=""><span>English</span></a></li>
+        </ul>
+      </div>
+      <nav class="gnb-menu">
+        <ul>
+          <li>
+            <a href=""><span>마이페이지</span></a>
+            <div class="gnb-submenu">
+              <div>
+                <p>이용내역</p>
+                <ul>
+                  <li><a href=""><span>이용대금명세서</span></a></li>
+                  <li><a href=""><span>결제예정금액</span></a></li>
+                  <li><a href=""><span>카드이용내역</span></a></li>
+                  <li><a href=""><span>해외이용내역</span></a></li>
+                  <li><a href=""><span>연체내역</span></a></li>
+                  <li><a href=""><span>교통-후불하이패스이용내역</span></a></li>
+                  <li><a href=""><span>소득공제내역</span></a></li>
+                  <li><a href=""><span>종합소득세이용내역</span></a></li>
+                  <li><a href=""><span>수수료납부내역</span></a></li>
+                  <li><a href=""><span>유로상품 이용 현황</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>이용한도</p>
+                <ul>
+                  <li><a href=""><span>이용한도조회</span></a></li>
+                  <li><a href=""><span>이용한도상향</span></a></li>
+                  <li><a href=""><span>이용한도하향</span></a></li>
+                  <li><a href=""><span>카드한도변경</span></a></li>
+                  <li><a href=""><span>체크카드한도변경</span></a></li>
+                  <li><a href=""><span>자동차 특별한도 신청</span></a></li>
+                  <li><a href=""><span>특별한도 신청</span></a></li>
+                  <li><a href=""><span>장기무실적 한도하향 제외신청</span></a></li>
+                </ul>
+                <p>이용금액결제</p>
+                <ul>
+                  <li><a href=""><span>즉시결제</span></a></li>
+                  <li><a href=""><span>입금내역</span></a></li>
+                  <li><a href=""><span>분할납부 서비스&#40;일시불·할부전환&#41;</span></a></li>
+                  <li><a href=""><span>이용대금포인트/크로스마일결제</span></a></li>
+                  <li><a href=""><span>가상계좌</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>이용안심 서비스</p>
+                <ul>
+                  <li><a href=""><span>이용안림&#40;SMS&#41;서비스</span></a></li>
+                  <li><a href=""><span>카드영수증 알림서비스</span></a></li>
+                  <li><a href=""><span>스마트폰 Push알림</span></a></li>
+                  <li><a href=""><span>토스 알림서비스</span></a></li>
+                  <li><a href=""><span>해외결제/해외원화결제&#40;DCC&#41;차단 서비스</span></a></li>
+                  <li><a href=""><span>출입국 정보제공 동의/거절</span></a></li>
+                  <li><a href=""><span>일반결제&#40;안심클릭&#41;서비스</span></a></li>
+                  <li><a href=""><span>간편결제서비스</span></a></li>
+                  <li><a href=""><span>ARS인증서비스</span></a></li>
+                  <li><a href=""><span>SMS간편결제서비스</span></a></li>
+                  <li><a href=""><span>카드본인확인서비스</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>선불카드</p>
+                <ul>
+                  <li><a href=""><span>기명식 선불카드 거래내역</span></a></li>
+                  <li><a href=""><span>기명식 선불카드충전/환불/정보관리</span></a></li>
+                  <li><a href=""><span>무기명식 선불카드 거래내역</span></a></li>
+                  <li><a href=""><span>무기명식 선불카드 환불/정보관리</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>개인/카드정보</p>
+                <ul>
+                  <li><a href=""><span>개인정보관리</span></a></li>
+                  <li><a href=""><span>웹회원정보변경</span></a></li>
+                  <li><a href=""><span>보유카드정보</span></a></li>
+                  <li><a href=""><span>결제정보변경</span></a></li>
+                  <li><a href=""><span>명세서 관리&#40;변경/신청&#41;</span></a></li>
+                  <li><a href=""><span>장기미이용카드 유지신청</span></a></li>
+                  <li><a href=""><span>유효기간만료예정카드&#40;조회/발급&#41;</span></a></li>
+                  <li><a href=""><span>카드해지신청</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href=""><span>카드</span></a>
+            <div class="gnb-submenu">
+              <div>
+                <p>카드안내</p>
+                <ul>
+                  <li><a href=""><span>원더카드</span></a></li>
+                  <li><a href=""><span>신용카드</span></a></li>
+                  <li><a href=""><span>체크카드</span></a></li>
+                  <li><a href=""><span>제휴카드</span></a></li>
+                  <li><a href=""><span>선불카드</span></a></li>
+                  <li><a href=""><span>가족카드</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>카드추천</p>
+                <ul>
+                  <li><a href=""><span>카드한눈에보기</span></a></li>
+                  <li><a href=""><span>추천카드</span></a></li>
+                  <li><a href=""><span>내게 맞는 카드</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <ul class="notice">
+                  <li><a href=""><span>바로발급안내</span></a></li>
+                  <li><a href=""><span>빠른발급안내></span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>발급조회/사용등록</p>
+                <ul>
+                  <li><a href=""><span>카드발급조회</span></a></li>
+                  <li><a href=""><span>카드신청서조회</span></a></li>
+                  <li><a href=""><span>신용카드설명서조회</span></a></li>
+                  <li><a href=""><span>카드사용등록&#40;신용카드, 선불카드&#41;</span></a></li>
+                  <li><a href=""><span>카드비밀번호등록/변경</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <img src="" alt="윈더카드 이미지">
+                <ul>
+                  <li><a href=""><span>원더카드</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href=""><span>금융</span></a>
+            <div class="gnb-submenu">
+              <div>
+                <p>단기카드대출&#40;현금서비스&#41;</p>
+                <ul>
+                  <li><a href=""><span>안내</span></a></li>
+                  <li><a href=""><span>신청/예약신청</span></a></li>
+                  <li><a href=""><span>이용내역</span></a></li>
+                  <li><a href=""><span>예약신청결과조회/취소</span></a></li>
+                  <li><a href=""><span>이용동의/거절신청</span></a></li>
+                  <li><a href=""><span>수수료계산</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>장기카드대출&#40;카드론&#41;</p>
+                <ul>
+                  <li><a href=""><span>안내</span></a></li>
+                  <li><a href=""><span>신청</span></a></li>
+                  <li><a href=""><span>대출내역</span></a></li>
+                  <li><a href=""><span>대출계약철회</span></a></li>
+                  <li><a href=""><span>이용동의/거절신청</span></a></li>
+                  <li><a href=""><span>수수료계산</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>일부결제금액이월약정&#40;리볼빙&#41;</p>
+                <ul>
+                  <li><a href=""><span>안내</span></a></li>
+                  <li><a href=""><span>신청</span></a></li>
+                  <li><a href=""><span>조회/변경</span></a></li>
+                  <li><a href=""><span>해지</span></a></li>
+                  <li><a href=""><span>이월내역조회</span></a></li>
+                  <li><a href=""><span>이자율상세내역</span></a></li>
+                  <li><a href=""><span>시뮬레이션</span></a></li>
+                  <li><a href=""><span>통합</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>신용대출</p>
+                <ul>
+                  <li><a href=""><span>대출계약철회권 안내</span></a></li>
+                  <li><a href=""><span>대출내역조회</span></a></li>
+                  <li><a href=""><span>대출상환신청</span></a></li>
+                  <li><a href=""><span>대출회원정보변경</span></a></li>
+                  <li><a href=""><span>대출결제정보변경</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <ul class="notice">
+                  <li><a href=""><span>제휴사 대출</span></a></li>
+                  <li><a href=""><span>금리인하요구권</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li>
+            <a href=""><span>자동차금융</span></a>
+            <div class="gnb-submenu">
+              <div>
+                <p>오토카드할부</p>
+                <ul>
+                  <li><a href=""><span>한도조회</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>오토할부</p>
+                <ul>
+                  <li><a href=""><span>안내</span></a></li>
+                  <li><a href=""><span>월납입금 확인</span></a></li>
+                  <li><a href=""><span>전화상담신청</span></a></li>
+                  <li><a href=""><span>한도조회</span></a></li>
+                </ul>
+              </div>
+              <div>
+                <p>오토론</p>
+                <ul>
+                  <li><a href=""><span>안내</span></a></li>
+                  <li><a href=""><span>월납입금 확인</span></a></li>
+                  <li><a href=""><span>전화상담신청</span></a></li>
+                  <li><a href=""><span>한도조회</span></a></li>
+                </ul>
+              </div>
+            </div>
+          </li>
+          <li><a href=""><span>모바일</span></a></li>
+          <li><a href=""><span>라이프</span></a></li>
+          <li><a href=""><span>혜택</span></a></li>
+          <li><a href=""><span>고객센터</span></a></li>
         </ul>
         <ul>
           <li><button type="button" class="blind">검색</button></li>
-          <li><button type="button" class="blind">영문 버전</button></li>
-          <li><button type="button" class="blind">다크 모드</button></li>
+          <li><button type="button">간편서비스</button></li>
+          <li><button type="button">전체메뉴</button></li>
         </ul>
-      </div>
-      <div class="gnb-bottom">
-        <span>카카오톡</span>
-        <ul>
-          <li><a href=""><span>카톡 안녕가이드</span></a></li>
-          <li><a href=""><span>카톡설명서</span></a></li>
-          <li><a href=""><span>다운로드</span></a></li>
-        </ul>
-      </div>
+      </nav>
     </div>
   </header>
 
